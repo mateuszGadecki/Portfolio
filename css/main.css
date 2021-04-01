@@ -1,3 +1,7 @@
+/* --------------- Basic setup --------------- */
+/* --------------- Fonts --------------- */
+@import url("https://fonts.googleapis.com/css2?family=Hind+Vadodara:wght@300;400;500;600&family=Libre+Franklin:wght@100;200;300;400;500&family=Ubuntu:wght@300;400;500;700&display=swap");
+
 body,
 html {
   min-height: 100%;
@@ -14,6 +18,11 @@ body {
   text-rendering: optimizeLegibility;
   overflow-x: hidden !important;
   font-size: 62.5%;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.homeSlide {
+  z-index: 1;
 }
 
 .bcg {
@@ -51,4 +60,46 @@ body {
 }
 .contactSection {
   background: linear-gradient(#4c4c4c, #fff);
+}
+
+/* --------------- HomePage navigation --------------- */
+
+.homePageNav {
+  width: 90%;
+  margin: 50px auto 0 auto;
+}
+
+.navButtonContainer {
+  width: 100%;
+}
+
+.navButton {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #fff 3px, transparent 3px) 0 0,
+    linear-gradient(to right, #fff 3px, transparent 3px) 0 100%,
+    linear-gradient(to left, #fff 3px, transparent 3px) 100% 0,
+    linear-gradient(to left, #fff 3px, transparent 3px) 100% 100%,
+    linear-gradient(to bottom, #fff 3px, transparent 3px) 0 0,
+    linear-gradient(to bottom, #fff 3px, transparent 3px) 100% 0,
+    linear-gradient(to top, #fff 3px, transparent 3px) 0 100%,
+    linear-gradient(to top, #fff 3px, transparent 3px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  padding: 5px 15px;
+  color: #fff;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  transition: background-size 0.5s;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  width: auto;
+}
+
+.navButton:hover {
+  background-size: 100% 100%;
 }
