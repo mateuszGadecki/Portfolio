@@ -32,16 +32,21 @@ body {
   background: linear-gradient(#000, #191919);
 }
 .skillsSection {
-  background: linear-gradient(#191919, #333);
+  background: linear-gradient(#333, #4c4c4c);
 }
 .projectsSection {
-  background: linear-gradient(#333, #4c4c4c);
+  background: linear-gradient(#191919, #333);
 }
 .contactSection {
   background: linear-gradient(#4c4c4c, #fff);
 }
 
 /* --------------- HomePage --------------- */
+.home {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .homePageWrapper {
   height: 100%;
   display: grid;
@@ -209,3 +214,61 @@ body {
     top: 20px;
   }
 }
+/* --------------- Fixed menu --------------- */
+.fixedMenu {
+  width: 30px;
+  height: 30px;
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.fixedMenu.active {
+  visibility: visible;
+  opacity: 1;
+  top: 5%;
+}
+
+.hamburger {
+  filter: invert(100%) sepia(11%) saturate(7493%) hue-rotate(226deg)
+    brightness(113%) contrast(112%);
+  width: 100%;
+  height: auto;
+}
+
+.fixedMenuContainer {
+  position: absolute;
+  padding: 5px 0 0 20px;
+  list-style: none;
+  width: max-content;
+  visibility: hidden;
+  opacity: 0;
+  left: -30%;
+  transition: 0.3s;
+}
+
+.fixedMenuContainer.clicked {
+  visibility: visible;
+  opacity: 1;
+  left: 0%;
+}
+
+.fixedMenuContainer li {
+  margin-bottom: 8px;
+}
+
+.fixedMenuItem {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  color: #ddd;
+  font-size: 1rem;
+}
+/* --------------- About me section --------------- */
+/* --------------- Projects section --------------- */
+/* --------------- Skills section --------------- */
+/* --------------- Contact section --------------- */

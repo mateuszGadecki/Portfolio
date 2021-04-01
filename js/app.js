@@ -3,6 +3,7 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
+// Initializing skrollr and skrollr menu
 (function ($) {
   $window = $(window);
   $htmlbody = $("html,body");
@@ -33,3 +34,27 @@ window.onbeforeunload = function () {
 
   adjustWindow();
 })(jQuery);
+
+// Toggle Elements on scroll
+
+const DOMstrings = {
+  fixedMenu: document.querySelector(".fixedMenu"),
+  menuItems: document.querySelector(".fixedMenuContainer"),
+  hamburger: document.querySelector(".hamburger"),
+};
+const height = {
+  homePage: document.querySelector(".homeSlide").offsetHeight,
+};
+
+const toggleElementOnScroll = (element, height) => {
+  window.addEventListener("scroll", () => {
+    element.classList.toggle("active", window.scrollY > height);
+  });
+};
+
+toggleElementOnScroll(DOMstrings.fixedMenu, height.homePage);
+
+// Toggle menu on click hamburgerButton
+DOMstrings.hamburger.addEventListener("click", () => {
+  DOMstrings.menuItems.classList.toggle("clicked");
+});

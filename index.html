@@ -8,6 +8,7 @@
     <title>Mateusz Gadecki</title>
   </head>
   <body>
+    <div id="home" class="home"></div>
     <section id="slide-1" class="homeSlide slide-1">
       <div
         class="bcg"
@@ -54,9 +55,30 @@
         </ul>
       </nav>
     </section>
-    <div id="scene1" class="aboutMeSection"></div>
-    <div id="scene2" class="skillsSection"></div>
-    <div id="scene3" class="projectsSection"></div>
+    <div id="scene1" class="aboutMeSection">
+      <div class="fixedMenu">
+        <image class="hamburger" src="./assets/incons/menu.svg" />
+        <ul class="fixedMenuContainer">
+          <li>
+            <a href="#home" class="fixedMenuItem">Home</a>
+          </li>
+          <li>
+            <a href="#scene1" class="fixedMenuItem">About me</a>
+          </li>
+          <li>
+            <a href="#scene2" class="fixedMenuItem">Projects</a>
+          </li>
+          <li>
+            <a href="#scene3" class="fixedMenuItem">Skills</a>
+          </li>
+          <li>
+            <a href="#scene4" class="fixedMenuItem">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="scene2" class="projectsSection"></div>
+    <div id="scene3" class="skillsSection"></div>
     <div id="scene4" class="contactSection"></div>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="./js/vendors/imagesloaded.js"></script>
