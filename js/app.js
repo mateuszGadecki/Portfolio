@@ -1,10 +1,14 @@
 import * as $ from "./vendors/jquery.min.js";
 import { DOMstrings, height } from "./modules/base.js";
+import { animate } from "./modules/particles.js";
 
 // after reloading, the page is always on the top
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+
+// Initializing particles as background
+animate();
 
 // Initializing skrollr and skrollr menu
 (function ($) {
@@ -18,11 +22,11 @@ window.onbeforeunload = function () {
       animate: true,
       easing: "linear",
       scale: 2,
-      duration: function (currentTop, targetTop) {
+      duration: function () {
         return 1500;
       },
       complexLinks: false,
-      change: function (newHash, newTopPosition) {},
+      change: function () {},
       updateUrl: false,
     });
     let winH = windowX.height();
