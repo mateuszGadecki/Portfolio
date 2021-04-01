@@ -40,15 +40,19 @@ animate();
   adjustWindow();
 })(jQuery);
 
-// Toggle Elements on scroll
-
+// Toggle Elements on scroll function
 const toggleElementOnScroll = (element, height) => {
   window.addEventListener("scroll", () => {
     element.classList.toggle("active", window.scrollY > height);
   });
 };
 
-toggleElementOnScroll(DOMstrings.fixedMenu, height.homePage);
+// adding an appearance and disappearance on scroll
+toggleElementOnScroll(DOMstrings.skillsTitle, height.topOfskillsSection);
+toggleElementOnScroll(DOMstrings.skillsIcons, height.topOfskillsSection + 80);
+toggleElementOnScroll(DOMstrings.toolsTitle, height.middleOfskillsSection);
+toggleElementOnScroll(DOMstrings.toolsIcons, height.middleOfskillsSection + 80);
+toggleElementOnScroll(DOMstrings.fixedMenu, height.aboutMeSection);
 
 // Toggle menu on click hamburgerButton
 DOMstrings.hamburger.addEventListener("click", () => {
