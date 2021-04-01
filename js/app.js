@@ -1,3 +1,6 @@
+import * as $ from "./vendors/jquery.min.js";
+import { DOMstrings, height } from "./modules/base.js";
+
 // after reloading, the page is always on the top
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
@@ -5,10 +8,8 @@ window.onbeforeunload = function () {
 
 // Initializing skrollr and skrollr menu
 (function ($) {
-  $window = $(window);
-  $htmlbody = $("html,body");
-  $slide = $(".homeSlide");
-  $body = $("body");
+  let windowX = $(window);
+  let slide = $(".homeSlide");
 
   function adjustWindow() {
     var s = skrollr.init();
@@ -24,11 +25,11 @@ window.onbeforeunload = function () {
       change: function (newHash, newTopPosition) {},
       updateUrl: false,
     });
-    winH = $window.height();
+    let winH = windowX.height();
     if (winH <= 550) {
       winH = 550;
     }
-    $slide.height(winH * 2);
+    slide.height(winH * 2);
     s.refresh($(".homeSlide"));
   }
 
@@ -36,15 +37,6 @@ window.onbeforeunload = function () {
 })(jQuery);
 
 // Toggle Elements on scroll
-
-const DOMstrings = {
-  fixedMenu: document.querySelector(".fixedMenu"),
-  menuItems: document.querySelector(".fixedMenuContainer"),
-  hamburger: document.querySelector(".hamburger"),
-};
-const height = {
-  homePage: document.querySelector(".homeSlide").offsetHeight,
-};
 
 const toggleElementOnScroll = (element, height) => {
   window.addEventListener("scroll", () => {

@@ -31,9 +31,6 @@ body {
 .aboutMeSection {
   background: linear-gradient(#000, #191919);
 }
-.skillsSection {
-  background: linear-gradient(#333, #4c4c4c);
-}
 .projectsSection {
   background: linear-gradient(#191919, #333);
 }
@@ -225,6 +222,7 @@ body {
   opacity: 0;
   transition: 0.5s;
   cursor: pointer;
+  z-index: 999;
 }
 
 .fixedMenu.active {
@@ -271,4 +269,15 @@ body {
 /* --------------- About me section --------------- */
 /* --------------- Projects section --------------- */
 /* --------------- Skills section --------------- */
+.skillsSection {
+  background: linear-gradient(#333, #4c4c4c);
+}
+
+.skills {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 /* --------------- Contact section --------------- */

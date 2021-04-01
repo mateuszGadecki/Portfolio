@@ -736,7 +736,7 @@
         currentTouchTime = e.timeStamp;
 
         if (!rxTouchIgnoreTags.test(currentElement.tagName)) {
-          e.preventDefault();
+          if (e.cancelable) e.preventDefault();
         }
 
         switch (e.type) {
