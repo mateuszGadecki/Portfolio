@@ -157,3 +157,55 @@ body {
   color: #ddd;
   transform: rotateX(-180deg);
 }
+
+/* --------------- Mouse icon animation --------------- */
+.mouseIconContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.field {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.mouseIcon {
+  width: 20px;
+  height: 35px;
+  border: 2px solid #fff;
+  border-radius: 60px;
+  position: relative;
+}
+
+.mouseIcon::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 1;
+  animation: mouseWheel 1.5s infinite;
+  -webkit-animation: mouseWheel 1.5s infinite;
+}
+@keyframes mouseWheel {
+  to {
+    opacity: 0;
+    top: 20px;
+  }
+}
+
+@-webkit-keyframes mouseWheel {
+  to {
+    opacity: 0;
+    top: 20px;
+  }
+}
