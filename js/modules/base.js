@@ -8,6 +8,9 @@ export const DOMstrings = {
   toolsTitle: document.querySelector(".toolsTitle"),
   skillsIcons: document.querySelector(".skillsIcons"),
   toolsIcons: document.querySelector(".toolsIcons"),
+  aboutMeTitle: document.querySelector(".aboutMeTitle"),
+  roundPicture: document.querySelector(".roundPicture"),
+  description: document.querySelector(".description"),
 };
 export const height = {
   aboutMeSection: document.querySelector(".aboutMeSection").offsetHeight,
@@ -23,4 +26,7 @@ export const height = {
     document.querySelector(".aboutMeSection").offsetHeight +
     document.querySelector(".homeSlide").offsetHeight +
     document.querySelector(".skills").offsetHeight / 2,
+  middleOfaboutMeSection:
+    document.querySelector(".aboutMeSection").offsetHeight +
+    document.querySelector(".homeSlide").offsetHeight * 2.5,
 };

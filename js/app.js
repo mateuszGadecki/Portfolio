@@ -53,6 +53,9 @@ toggleElementOnScroll(DOMstrings.skillsIcons, height.topOfskillsSection + 80);
 toggleElementOnScroll(DOMstrings.toolsTitle, height.middleOfskillsSection);
 toggleElementOnScroll(DOMstrings.toolsIcons, height.middleOfskillsSection + 80);
 toggleElementOnScroll(DOMstrings.fixedMenu, height.aboutMeSection);
+toggleElementOnScroll(DOMstrings.aboutMeTitle, height.middleOfaboutMeSection);
+toggleElementOnScroll(DOMstrings.roundPicture, height.middleOfaboutMeSection);
+toggleElementOnScroll(DOMstrings.description, height.middleOfaboutMeSection);
 
 // Toggle menu on click hamburgerButton
 DOMstrings.hamburger.addEventListener("click", () => {

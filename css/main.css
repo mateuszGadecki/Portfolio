@@ -21,15 +21,12 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.aboutMeSection,
 .projectsSection,
 .contactSection {
   width: 100%;
   height: 100vh;
 }
-.aboutMeSection {
-  background: linear-gradient(#000, #080808);
-}
+
 .projectsSection {
   background: linear-gradient(#080808, #111);
 }
@@ -294,6 +291,108 @@ body {
   font-size: 1rem;
 }
 /* --------------- About me section --------------- */
+.aboutMeContent {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: min-content;
+  background: linear-gradient(#000, #080808);
+  padding: 80px 0;
+}
+
+.aboutMeTitle {
+  padding: 2% 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: 1s;
+  transform: translateY(20px);
+  z-index: 100;
+}
+
+.aboutMeTitle.active,
+.roundPicture.active,
+.description.active {
+  visibility: visible;
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.aboutMe {
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../assets/mountains.jpg");
+  width: 90%;
+  height: 90%;
+  margin: auto;
+  padding: 40px 0;
+  border-radius: 10px;
+}
+
+.blurred {
+  display: grid;
+  grid-template-rows: 20% 30% 45%;
+  position: relative;
+  width: 70%;
+  margin: auto;
+  height: auto;
+  background: inherit;
+  border-radius: 2px;
+}
+
+.blurred:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: inherit;
+  position: absolute;
+  left: 0;
+  top: 0;
+  box-shadow: inset 0 0 0 400px rgba(255, 255, 255, 0.05);
+  filter: blur(10px);
+}
+
+.description {
+  line-height: 145%;
+  font-size: 1rem;
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+  font-weight: 200;
+  color: #fff;
+  z-index: 100;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(20px);
+}
+
+.roundPictureWrapper {
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding: 80px 0;
+}
+
+.roundPicture {
+  width: 150px;
+  height: 150px;
+  margin: auto;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(20px);
+}
+
+.aboutMePicture {
+  border-radius: 50%;
+  height: 100%;
+  width: auto;
+}
+
 /* --------------- Projects section --------------- */
 /* --------------- Skills section --------------- */
 
