@@ -61,3 +61,9 @@ toggleElementOnScroll(DOMstrings.description, height.middleOfaboutMeSection);
 DOMstrings.hamburger.addEventListener("click", () => {
   DOMstrings.menuItems.classList.toggle("clicked");
 });
+
+DOMstrings.menuElements.forEach((el) => {
+  el.addEventListener("click", () => {
+    DOMstrings.menuItems.classList.remove("clicked");
+  });
+});
