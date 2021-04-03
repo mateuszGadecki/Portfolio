@@ -384,6 +384,128 @@ body {
   background: linear-gradient(#080808, #111);
 }
 
+.projects {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 100px 0;
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: min-content;
+  position: relative;
+}
+
+.projectsWrapper {
+  z-index: 100;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  padding: 40px 0;
+  gap: 30px;
+  grid-template-rows: 25% 25% 25% 25%;
+}
+
+.projectContainer_1,
+.projectContainer_2 {
+  border-radius: 15px;
+  margin-bottom: 60px;
+  width: 70%;
+  margin: 0 auto;
+  box-shadow: #5e5e5e 0px 5px 15px;
+  height: 400px;
+}
+
+.projectContainer_1 {
+  transform: perspective(1500px) rotateY(15deg);
+  transition: transform 1s ease 0s;
+}
+.projectContainer_2 {
+  transform: perspective(1500px) rotateY(-15deg);
+  transition: transform 1s ease 0s;
+}
+
+.projectContainer_1:hover {
+  transform: perspective(3000px) rotateY(5deg);
+}
+.projectContainer_2:hover {
+  transform: perspective(3000px) rotateY(-5deg);
+}
+
+.box {
+  height: 100%;
+  width: 95%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.projectDetails {
+  width: 95%;
+  height: 90%;
+  margin: auto;
+  display: grid;
+  grid-template-rows: 10% 70% 30%;
+}
+
+.projectDes {
+  color: #ddd;
+  line-height: 145%;
+  font-size: 1rem;
+}
+
+.projectLinks {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.linkContainer {
+  display: flex;
+  justify-content: center;
+  align-self: flex-start;
+}
+
+.linkButton {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #ddd 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, #ddd 2px, transparent 2px) 100% 0,
+    linear-gradient(to bottom, #ddd 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, #ddd 2px, transparent 2px) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  padding: 5px 15px;
+  color: #ddd;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  transition: all 0.5s;
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  width: auto;
+}
+
+.linkButton:hover {
+  background: linear-gradient(to right, #ddd 2px, transparent 2px) 0 0,
+    linear-gradient(to left, #ddd 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, #ddd 2px, transparent 2px) 0 0,
+    linear-gradient(to top, #ddd 2px, transparent 2px) 100% 100%,
+    linear-gradient(to right, transparent 2px, transparent 2px) 0 100%,
+    linear-gradient(to left, transparent 2px, transparent 2px) 100% 0,
+    linear-gradient(to bottom, transparent 2px, transparent 2px) 100% 0,
+    linear-gradient(to top, transparent 2px, transparent 2px) 0 100%;
+  background-size: 9px 9px;
+  background-repeat: no-repeat;
+}
+
+.screen {
+  position: relative;
+}
+
 /* --------------- Skills section --------------- */
 
 .skillsSection {
