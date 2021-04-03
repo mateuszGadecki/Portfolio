@@ -21,18 +21,13 @@ body {
   font-family: "Ubuntu", sans-serif;
 }
 
-.projectsSection,
-.contactSection {
+.projectsSection {
   width: 100%;
   height: 100vh;
 }
 
 .projectsSection {
   background: linear-gradient(#080808, #111);
-}
-
-.contactSection {
-  background: linear-gradient(#191919, #fff);
 }
 
 /* --------------- Reusable components --------------- */
@@ -157,7 +152,7 @@ body {
   padding: 8px 0;
   margin: 0 auto;
   background-color: #ddd;
-  color: #3d665b;
+  color: #4a3a34;
   position: relative;
   transform: rotateX(-90deg);
   transform-style: preserve-3d;
@@ -178,8 +173,8 @@ body {
   padding: 8px 0;
   border-radius: 3px;
   display: block;
-  border: 1px #3d665b solid;
-  background-color: #3d665b;
+  border: 1px #4a3a34 solid;
+  background-color: #4a3a34;
   color: #ddd;
   transform: rotateX(-180deg);
 }
@@ -514,3 +509,194 @@ body {
   opacity: 1;
 }
 /* --------------- Contact section --------------- */
+
+.contactSection {
+  background: linear-gradient(#191919, #fff);
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding: 120px 0;
+  display: grid;
+  grid-template-rows: auto;
+  grid-auto-rows: min-content;
+  position: relative;
+}
+
+.contact {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 20% 80%;
+}
+
+.contactTitle {
+  color: #000;
+  font-size: 2.4rem;
+  padding: 8px 15px;
+  background: linear-gradient(to right, #000 2px, transparent 2px) 0 0,
+    linear-gradient(to left, #000 2px, transparent 2px) 100% 100%,
+    linear-gradient(to bottom, #000 2px, transparent 2px) 0 0,
+    linear-gradient(to top, #000 2px, transparent 2px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  z-index: 100;
+  font-family: Libre Franklin;
+  letter-spacing: 2px;
+  font-weight: 300;
+  margin: 0;
+}
+
+.form {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px 0;
+  z-index: 100;
+}
+
+.formItem {
+  display: block;
+  padding: 20px 0;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Form */
+.input,
+.formQuestion,
+.label,
+.textarea {
+  display: block;
+  margin: 10px;
+  padding: 5px;
+  border: none;
+  resize: none;
+  cursor: text;
+}
+
+.textarea:focus,
+.input:focus {
+  outline: 0;
+}
+/* Question */
+
+.input.question,
+.textarea.question {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden;
+}
+/* Underline and Placeholder */
+
+.input.question + .label,
+.textarea.question + .label {
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 20%;
+  border-top: 2px solid #725950;
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+.input.question:focus + .label,
+.textarea.question:focus + .label {
+  width: 60%;
+}
+
+.input.question:focus,
+.input.question:valid {
+  padding-top: 35px;
+}
+
+.textarea.question:valid,
+.textarea.question:focus {
+  margin-top: 35px;
+}
+
+.input.question:focus + .label > .formQuestion,
+.input.question:valid + .label > .formQuestion {
+  top: -80px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.textarea.question:focus + .label > .formQuestion,
+.textarea.question:valid + .label > .formQuestion {
+  top: -120px;
+  font-size: 1.4rem;
+  color: #333;
+}
+
+.input.question:valid + .label,
+.textarea.question:valid + .label {
+  border-color: #6ab04c;
+}
+
+.input.question:invalid,
+.textarea.question:invalid {
+  box-shadow: none;
+}
+
+.input.question + .label > .formQuestion,
+.textarea.question + .label > .formQuestion {
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #333;
+  font-size: 1.4rem;
+  top: -35px;
+  left: 0px;
+  z-index: 100;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+.submitButtonContainer {
+  padding: 20px 0;
+}
+
+.submitButton {
+  text-decoration: none;
+  border: none;
+  outline: none;
+  background: linear-gradient(to right, #725950 3px, transparent 3px) 0 0,
+    linear-gradient(to right, #725950 3px, transparent 3px) 0 100%,
+    linear-gradient(to left, #725950 3px, transparent 3px) 100% 0,
+    linear-gradient(to left, #725950 3px, transparent 3px) 100% 100%,
+    linear-gradient(to bottom, #725950 3px, transparent 3px) 0 0,
+    linear-gradient(to bottom, #725950 3px, transparent 3px) 100% 0,
+    linear-gradient(to top, #725950 3px, transparent 3px) 0 100%,
+    linear-gradient(to top, #725950 3px, transparent 3px) 100% 100%;
+  background-repeat: no-repeat;
+  background-size: 9px 9px;
+  padding: 5px 15px;
+  color: #333;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  transition: background-size 0.5s;
+  cursor: pointer;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  font-weight: 300;
+  width: auto;
+}
+
+.submitButton:hover {
+  background-size: 100% 100%;
+}
