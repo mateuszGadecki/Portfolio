@@ -12,6 +12,10 @@ export const DOMstrings = {
   roundPicture: document.querySelector(".roundPicture"),
   description: document.querySelector(".description"),
   menuElements: document.querySelectorAll(".fixedMenuItem"),
+  form: document.querySelector(".form"),
+  name: document.querySelector("#nme"),
+  email: document.querySelector("#email"),
+  message: document.querySelector("#msg"),
 };
 export const height = {
   aboutMeSection: document.querySelector(".aboutMeSection").offsetHeight,

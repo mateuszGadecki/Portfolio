@@ -1,6 +1,7 @@
 import * as $ from "./vendors/jquery.min.js";
 import { DOMstrings, height } from "./modules/base.js";
 import { animate } from "./modules/particles.js";
+import { firebaseConfig } from "./modules/firebaseConfig.js";
 
 // after reloading, the page is always on the top
 window.onbeforeunload = function () {
@@ -67,3 +68,34 @@ DOMstrings.menuElements.forEach((el) => {
     DOMstrings.menuItems.classList.remove("clicked");
   });
 });
+
+// Contact Form
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+let contactInfo = firebase.database().ref("infos");
+
+const saveValues = (name, email, message) => {
+  let newContactInfo = contactInfo.push();
+
+  newContactInfo.set({
+    name: name,
+    email: email,
+    message: message,
+  });
+};
+
+const submitHandler = (e) => {
+  e.preventDefault();
+  let name = DOMstrings.name.value;
+  let email = DOMstrings.email.value;
+  let message = DOMstrings.message.value;
+
+  saveValues(name, email, message);
+
+  DOMstrings.form.reset();
+};
+
+DOMstrings.form.addEventListener("submit", submitHandler);
