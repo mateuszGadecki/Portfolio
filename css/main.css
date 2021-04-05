@@ -343,7 +343,7 @@ body {
 
 .description {
   line-height: 145%;
-  font-size: 1rem;
+  font-size: 1.1rem;
   width: 90%;
   margin: 0 auto;
   padding: 50px 0;
@@ -415,19 +415,38 @@ body {
   min-height: 400px;
 }
 
-.projectContainer_1 {
-  transform: perspective(1500px) rotateY(15deg);
-  transition: transform 1s ease 0s;
+.flume,
+.forkify,
+.template,
+.burger {
+  visibility: hidden;
+  opacity: 0;
 }
-.projectContainer_2 {
-  transform: perspective(1500px) rotateY(-15deg);
-  transition: transform 1s ease 0s;
+.flume.active,
+.forkify.active,
+.template.active,
+.burger.active {
+  visibility: visible;
+  opacity: 1;
 }
 
-.projectContainer_1:hover {
+.flume.active,
+.template.active {
+  transform: perspective(1500px) rotateY(15deg);
+  transition: all 1s ease 0s;
+}
+.forkify.active,
+.burger.active {
+  transform: perspective(1500px) rotateY(-15deg);
+  transition: all 1s ease 0s;
+}
+
+.flume.active:hover,
+.template.active:hover {
   transform: perspective(3000px) rotateY(5deg);
 }
-.projectContainer_2:hover {
+.forkify.active:hover,
+.burger.active:hover {
   transform: perspective(3000px) rotateY(-5deg);
 }
 
@@ -529,24 +548,6 @@ body {
   justify-content: center;
   align-items: center;
   color: #ddd;
-}
-
-#project_1,
-#project_2,
-#project_3,
-#project_4 {
-  visibility: hidden;
-  opacity: 0;
-  transition: 1s;
-  transform: translateY(50px);
-}
-#project_1.active,
-#project_2.active,
-#project_3.active,
-#project_4.active {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0px);
 }
 
 /* --------------- Skills section --------------- */
