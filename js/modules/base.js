@@ -16,22 +16,7 @@ export const DOMstrings = {
   name: document.querySelector("#nme"),
   email: document.querySelector("#email"),
   message: document.querySelector("#msg"),
-};
-export const height = {
-  aboutMeSection: document.querySelector(".aboutMeSection").offsetHeight,
-  topOfskillsSection:
-    document.querySelector(".skillsSection").offsetHeight +
-    document.querySelector(".projectsSection").offsetHeight +
-    document.querySelector(".aboutMeSection").offsetHeight +
-    document.querySelector(".homeSlide").offsetHeight +
-    document.querySelector(".skills").offsetHeight / 3,
-  middleOfskillsSection:
-    document.querySelector(".skillsSection").offsetHeight +
-    document.querySelector(".projectsSection").offsetHeight +
-    document.querySelector(".aboutMeSection").offsetHeight +
-    document.querySelector(".homeSlide").offsetHeight +
-    document.querySelector(".skills").offsetHeight / 2,
-  middleOfaboutMeSection:
-    document.querySelector(".aboutMeSection").offsetHeight +
-    document.querySelector(".homeSlide").offsetHeight * 2.5,
+  homePage: document.querySelector(".homeSlide"),
+  aboutMeSection: document.querySelector(".aboutMeSection"),
+  skillsSection: document.querySelector(".skillsSection"),
 };

@@ -1,5 +1,5 @@
 import * as $ from "./vendors/jquery.min.js";
-import { DOMstrings, height } from "./modules/base.js";
+import { DOMstrings } from "./modules/base.js";
 import { animate } from "./modules/particles.js";
 import { firebaseConfig } from "./modules/firebaseConfig.js";
 
@@ -41,6 +41,29 @@ animate();
   adjustWindow();
 })(jQuery);
 
+const height = {
+  botOfHomePage:
+    DOMstrings.homePage.getBoundingClientRect().bottom + window.scrollY,
+  midOfAboutMeSec:
+    DOMstrings.aboutMeTitle.getBoundingClientRect().top +
+    window.scrollY -
+    0.5 * DOMstrings.aboutMeSection.offsetHeight,
+  botOfAboutMeSec:
+    DOMstrings.aboutMeTitle.getBoundingClientRect().top +
+    window.scrollY -
+    0.3 * DOMstrings.aboutMeSection.offsetHeight,
+  midOfSkillsSec:
+    DOMstrings.skillsTitle.getBoundingClientRect().top +
+    window.scrollY -
+    0.5 * DOMstrings.skillsSection.offsetHeight,
+  botOfSkillsSec:
+    DOMstrings.skillsTitle.getBoundingClientRect().top +
+    window.scrollY -
+    0.3 * DOMstrings.skillsSection.offsetHeight,
+};
+
+console.log(height.aboutMeTitle);
+
 // Toggle Elements on scroll function
 const toggleElementOnScroll = (element, height) => {
   window.addEventListener("scroll", () => {
@@ -49,14 +72,14 @@ const toggleElementOnScroll = (element, height) => {
 };
 
 // adding an appearance and disappearance on scroll
-toggleElementOnScroll(DOMstrings.skillsTitle, height.topOfskillsSection);
-toggleElementOnScroll(DOMstrings.skillsIcons, height.topOfskillsSection + 80);
-toggleElementOnScroll(DOMstrings.toolsTitle, height.middleOfskillsSection);
-toggleElementOnScroll(DOMstrings.toolsIcons, height.middleOfskillsSection + 80);
-toggleElementOnScroll(DOMstrings.fixedMenu, height.aboutMeSection);
-toggleElementOnScroll(DOMstrings.aboutMeTitle, height.middleOfaboutMeSection);
-toggleElementOnScroll(DOMstrings.roundPicture, height.middleOfaboutMeSection);
-toggleElementOnScroll(DOMstrings.description, height.middleOfaboutMeSection);
+toggleElementOnScroll(DOMstrings.fixedMenu, height.botOfHomePage - 350);
+toggleElementOnScroll(DOMstrings.aboutMeTitle, height.midOfAboutMeSec);
+toggleElementOnScroll(DOMstrings.roundPicture, height.midOfAboutMeSec);
+toggleElementOnScroll(DOMstrings.description, height.botOfAboutMeSec);
+toggleElementOnScroll(DOMstrings.skillsTitle, height.midOfSkillsSec);
+toggleElementOnScroll(DOMstrings.skillsIcons, height.midOfSkillsSec);
+toggleElementOnScroll(DOMstrings.toolsTitle, height.botOfSkillsSec);
+toggleElementOnScroll(DOMstrings.toolsIcons, height.botOfSkillsSec);
 
 // Toggle menu on click hamburgerButton
 DOMstrings.hamburger.addEventListener("click", () => {
