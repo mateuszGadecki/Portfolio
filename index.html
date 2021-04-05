@@ -115,12 +115,17 @@
     <div id="scene2" class="projectsSection">
       <div class="projects">
         <div class="sectionTitleContainer">
-          <h1 class="sectionTitle">my projects</h1>
+          <h1 class="sectionTitle projectsTitle">my projects</h1>
         </div>
         <div class="projectsWrapper">
-          <div class="projectContainer_1">
-            <div class="box">
-              <div class="screen"></div>
+          <div class="projectContainer_1" id="project_1">
+            <div class="box_1">
+              <div class="screen">
+                <img
+                  class="projectScreen"
+                  src="./assets/screens/flumeWeb.png"
+                />
+              </div>
               <div class="projectDetails">
                 <div class="projectTitle">
                   <h2>Flume</h2>
@@ -146,12 +151,50 @@
               </div>
             </div>
           </div>
-          <div class="projectContainer_2">
-            <div class="box">
-              <div class="screen"></div>
+          <div class="projectContainer_2" id="project_2">
+            <div class="box_2">
               <div class="projectDetails">
                 <div class="projectTitle">
-                  <h2>Flume</h2>
+                  <h2>Forkify</h2>
+                </div>
+                <div class="projectDes">
+                  <p>
+                    lorem ipsum dolor sit amet, consectetur adipisicing ellorem
+                    ipsum dolor sit amet, consectetur adipisicing ellorem ipsum
+                    dolor sit amet, consectetur adipisicing ellorem ipsum dolor
+                    sit amet, consectetur adipisicing ellorem ipsum dolor sit
+                    amet, consectetur adipisicing ellorem ipsum dolor sit amet,
+                    consectetur adipisicing ellorem ipsum dolor sit amet,
+                  </p>
+                </div>
+                <div class="projectLinks">
+                  <div class="linkContainer">
+                    <button class="linkButton">gitHub</button>
+                  </div>
+                  <div class="linkContainer">
+                    <button class="linkButton">live</button>
+                  </div>
+                </div>
+              </div>
+              <div class="screen">
+                <img
+                  class="projectScreen"
+                  src="./assets/screens/forkifyWeb.png"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="projectContainer_1" id="project_3">
+            <div class="box_1">
+              <div class="screen">
+                <img
+                  class="projectScreen"
+                  src="./assets/screens/templateWebBlack.png"
+                />
+              </div>
+              <div class="projectDetails">
+                <div class="projectTitle">
+                  <h2>Page template (clone)</h2>
                 </div>
                 <div class="projectDes">
                   <p>
@@ -174,12 +217,11 @@
               </div>
             </div>
           </div>
-          <div class="projectContainer_1">
-            <div class="box">
-              <div class="screen"></div>
+          <div class="projectContainer_2" id="project_4">
+            <div class="box_2">
               <div class="projectDetails">
                 <div class="projectTitle">
-                  <h2>Flume</h2>
+                  <h2>Burger Builder</h2>
                 </div>
                 <div class="projectDes">
                   <p>
@@ -200,33 +242,11 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="projectContainer_2">
-            <div class="box">
-              <div class="screen"></div>
-              <div class="projectDetails">
-                <div class="projectTitle">
-                  <h2>Flume</h2>
-                </div>
-                <div class="projectDes">
-                  <p>
-                    lorem ipsum dolor sit amet, consectetur adipisicing ellorem
-                    ipsum dolor sit amet, consectetur adipisicing ellorem ipsum
-                    dolor sit amet, consectetur adipisicing ellorem ipsum dolor
-                    sit amet, consectetur adipisicing ellorem ipsum dolor sit
-                    amet, consectetur adipisicing ellorem ipsum dolor sit amet,
-                    consectetur adipisicing ellorem ipsum dolor sit amet,
-                  </p>
-                </div>
-                <div class="projectLinks">
-                  <div class="linkContainer">
-                    <button class="linkButton">gitHub</button>
-                  </div>
-                  <div class="linkContainer">
-                    <button class="linkButton">live</button>
-                  </div>
-                </div>
+              <div class="screen">
+                <img
+                  class="projectScreen"
+                  src="./assets/screens/burgerWeb.png"
+                />
               </div>
             </div>
           </div>
@@ -366,6 +386,7 @@
       type="text/javascript"
       src="./js/vendors/skrollr.menu.min.js"
     ></script>
+    <script src="https://www.gstatic.com/firebasejs/8.3.2/firebase.js"></script>
     <script type="module" src="./js/app.js"></script>
   </body>
 </html>

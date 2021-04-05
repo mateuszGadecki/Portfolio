@@ -19,4 +19,12 @@ export const DOMstrings = {
   homePage: document.querySelector(".homeSlide"),
   aboutMeSection: document.querySelector(".aboutMeSection"),
   skillsSection: document.querySelector(".skillsSection"),
+  projectsTitle: document.querySelector(".projectsTitle"),
+  projectsSection: document.querySelector(".projectsSection"),
+  project_1: document.querySelector("#project_1"),
+  project_2: document.querySelector("#project_2"),
+  project_3: document.querySelector("#project_3"),
+  project_4: document.querySelector("#project_4"),
+  contactSection: document.querySelector(".contactSection"),
+  contact: document.querySelector(".contact"),
 };

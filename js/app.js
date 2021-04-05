@@ -60,6 +60,18 @@ const height = {
     DOMstrings.skillsTitle.getBoundingClientRect().top +
     window.scrollY -
     0.3 * DOMstrings.skillsSection.offsetHeight,
+  midOfProjectsSection:
+    DOMstrings.projectsTitle.getBoundingClientRect().top +
+    window.scrollY -
+    0.2 * DOMstrings.projectsSection.offsetHeight,
+  botOfProjectsSection:
+    DOMstrings.project_3.getBoundingClientRect().top +
+    window.scrollY -
+    0.25 * DOMstrings.projectsSection.offsetHeight,
+  midOfContactSection:
+    DOMstrings.contactSection.getBoundingClientRect().top +
+    window.scrollY -
+    0.7 * DOMstrings.contactSection.offsetHeight,
 };
 
 console.log(height.aboutMeTitle);
@@ -80,6 +92,11 @@ toggleElementOnScroll(DOMstrings.skillsTitle, height.midOfSkillsSec);
 toggleElementOnScroll(DOMstrings.skillsIcons, height.midOfSkillsSec);
 toggleElementOnScroll(DOMstrings.toolsTitle, height.botOfSkillsSec);
 toggleElementOnScroll(DOMstrings.toolsIcons, height.botOfSkillsSec);
+toggleElementOnScroll(DOMstrings.project_1, height.midOfProjectsSection);
+toggleElementOnScroll(DOMstrings.project_2, height.midOfProjectsSection);
+toggleElementOnScroll(DOMstrings.project_3, height.botOfProjectsSection);
+toggleElementOnScroll(DOMstrings.project_4, height.botOfProjectsSection);
+toggleElementOnScroll(DOMstrings.contact, height.midOfContactSection);
 
 // Toggle menu on click hamburgerButton
 DOMstrings.hamburger.addEventListener("click", () => {
