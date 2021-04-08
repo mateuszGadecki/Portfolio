@@ -893,6 +893,8 @@ body {
   .aboutMeTitle {
     visibility: visible;
     opacity: 1;
+    transform: translateY(0);
+    transform: translateX(0);
   }
   .sectionTitle {
     font-size: 2rem;
@@ -970,6 +972,16 @@ body {
   .projectScreen {
     max-height: 250px;
   }
+  /* --------------- Skills Section --------------- */
+  .skillsIcons {
+    padding: 10px 0 40px 0;
+    width: 90%;
+  }
+  .toolsIcons {
+    width: 90%;
+    grid-template-rows: 50% 50%;
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
 }
 
 @media (max-width: 425px) {
@@ -1010,7 +1022,31 @@ body {
   .projectTitle {
     font-size: 1.2rem;
   }
-}
+  /* --------------- Skills Section --------------- */
+  .skillIconWrapper,
+  .toolIconWrapper {
+    width: auto;
+    height: 40px;
+    margin: auto;
+    padding: 50px 0;
+  }
+  /* --------------- Contact Section --------------- */
+  .contactTitle {
+    font-size: 2rem;
+  }
+  .input.question,
+  .textarea.question {
+    font-size: 1.1rem;
+  }
+  .input.question:focus + .label > .formQuestion,
+  .input.question:valid + .label > .formQuestion {
+    top: -65px;
+    font-size: 1.2rem;
+  }
 
-/* --------------- Skills Section --------------- */
-/* --------------- Contact Section --------------- */
+  .textarea.question:focus + .label > .formQuestion,
+  .textarea.question:valid + .label > .formQuestion {
+    top: -100px;
+    font-size: 1.2rem;
+  }
+}
