@@ -8,6 +8,11 @@ import { firebaseConfig } from "./modules/firebaseConfig.js";
 window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
+// displaying spinner before the page is loaded
+window.addEventListener("load", () => {
+  console.log("loaded");
+  DOMstrings.loaderWrapper.classList.add("loaded");
+});
 
 // Initializing skrollr and skrollr menu
 (function ($) {

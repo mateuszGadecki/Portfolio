@@ -27,4 +27,5 @@ export const DOMstrings = {
   project_4: document.querySelector(".burger"),
   contactSection: document.querySelector(".contactSection"),
   contact: document.querySelector(".contact"),
+  loaderWrapper: document.querySelector(".loaderWrapper"),
 };
