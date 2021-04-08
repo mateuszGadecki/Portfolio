@@ -9,9 +9,6 @@ window.onbeforeunload = function () {
   window.scrollTo(0, 0);
 };
 
-// Initializing particles as background
-animate();
-
 // Initializing skrollr and skrollr menu
 (function ($) {
   let windowX = $(window);
@@ -19,7 +16,6 @@ animate();
 
   function adjustWindow() {
     var s = skrollr.init();
-    // Scroll to scene on button click
     skrollr.menu.init(s, {
       animate: true,
       easing: "linear",
@@ -42,6 +38,8 @@ animate();
   adjustWindow();
 })(jQuery);
 
+// Initializing particles as background
+animate();
 // Initialize animations on scroll
 animations();
 
@@ -56,12 +54,11 @@ DOMstrings.menuElements.forEach((el) => {
   });
 });
 
-// Contact Form
-
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+// Contact Form
 let contactInfo = firebase.database().ref("infos");
 
 const saveValues = (name, email, message) => {
