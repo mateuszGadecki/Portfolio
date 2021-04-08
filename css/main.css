@@ -75,7 +75,7 @@ body {
   top: 0;
   left: 0;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/background.jpg");
+    url("https://ik.imagekit.io/mehrzpy2d/background-min_NSuO1crBo.jpg");
   background-size: cover;
   overflow: hidden;
 }
@@ -317,7 +317,7 @@ body {
   background-size: cover;
   background-position: top;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../assets/ocean.jpg");
+    url("https://ik.imagekit.io/mehrzpy2d/ocean-min_ZXXhRq2JZ.jpg");
   width: 90%;
   height: 90%;
   margin: auto;
